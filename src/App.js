@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MarkdownPost from './components/MarkdownPost';
 import HomePage from './components/HomePage';
 import { saveAs } from 'file-saver';
-import './markdown.scss'; // Import the custom Markdown SCSS
-import './App.scss';
-import './components/HomePage.scss';
+import './markdown.css'; // Import the custom Markdown CSS
+import './App.css';
 
 const Sidebar = ({ posts }) => (
   <div className="sidebar">

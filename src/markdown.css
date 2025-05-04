@@ -1,9 +1,8 @@
-@import './styles/_variables.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Mono:wght@400&display=swap');
 body {
   font-family: 'Roboto', sans-serif;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .markdown-post h1 {
@@ -11,24 +10,24 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  color: $link-color;
+  color: var(--link-color);
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 p {
   margin: 10px 0;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s;
+}
 
-  &:hover {
-    color: $link-hover-color;
-  }
+a:hover {
+  color: var(--link-hover-color);
 }
 
 ul, ol {
@@ -42,24 +41,24 @@ li {
 
 code {
   font-family: 'Roboto Mono', monospace;
-  background-color: $card-bg-color;
-  color: $text-color;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 pre {
-  background-color: $card-bg-color;
-  color: $text-color;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
   padding: 10px;
   border-radius: 8px;
   overflow-x: auto;
 }
 
 blockquote {
-  border-left: 4px solid $link-color;
+  border-left: 4px solid var(--link-color);
   padding-left: 10px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
   margin: 10px 0;
   font-style: italic;
 }

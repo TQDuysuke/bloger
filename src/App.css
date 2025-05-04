@@ -1,0 +1,264 @@
+:root {
+  --background-color: #0d1117;
+  --text-color: #c9d1d9;
+  --secondary-text-color: #8b949e;
+  --link-color: #58a6ff;
+  --link-hover-color: #1f6feb;
+  --button-bg-color: #238636;
+  --button-hover-bg-color: #2ea043;
+  --card-bg-color: #21262d;
+  --navbar-bg-color: #161b22;
+  --border-color: #30363d;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-bg-color);
+  padding: 15px 30px;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar .nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: var(--link-hover-color);
+}
+
+.sidebar {
+  flex: 0 0 20%;
+  background-color: var(--navbar-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: var(--box-shadow);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: var(--link-hover-color);
+}
+
+.main-content {
+  width: 100%;  
+  background-color: var(--navbar-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.main-content h1 {
+  font-size: 24px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+}
+
+.hero {
+  background-color: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  color: var(--text-color);
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+}
+
+.hero a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--button-bg-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.hero a:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.card h2 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.markdown-post h1 {
+  display: none;
+}
+
+.post-header h1 {
+  display: inline;
+  font-size: 35px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.post-header button {
+  background-color: var(--button-bg-color);
+  color: white;
+}
+
+.post-header button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.toc {
+  margin-top: 20px;
+}
+
+.toc button {
+  background-color: var(--button-bg-color);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.toc button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: 5px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+.toc a:hover {
+  color: var(--link-hover-color);
+}
+
+.markdown-post {
+  background-color: var(--navbar-bg-color);
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.home-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.home-buttons .btn {
+  text-decoration: none;
+  color: white;
+  background-color: var(--button-bg-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.home-buttons .btn:hover {
+  background-color: var(--button-hover-bg-color);
+}
