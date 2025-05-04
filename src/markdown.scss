@@ -1,0 +1,65 @@
+@import './styles/_variables.scss';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.markdown-post h1 {
+  display: none;
+}
+
+h2, h3, h4, h5, h6 {
+  color: $link-color;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+ul, ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  background-color: $card-bg-color;
+  color: $text-color;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: $card-bg-color;
+  color: $text-color;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 4px solid $link-color;
+  padding-left: 10px;
+  color: $secondary-text-color;
+  margin: 10px 0;
+  font-style: italic;
+}

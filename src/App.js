@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MarkdownPost from './components/MarkdownPost';
+import HomePage from './components/HomePage';
 import { saveAs } from 'file-saver';
-import './App.css';
-import './markdown.css'; // Import the custom Markdown CSS
+import './markdown.scss'; // Import the custom Markdown SCSS
+import './App.scss';
+import './components/HomePage.scss';
 
 const Sidebar = ({ posts }) => (
   <div className="sidebar">
@@ -16,23 +18,6 @@ const Sidebar = ({ posts }) => (
         </li>
       ))}
     </ul>
-  </div>
-);
-
-const Home = ({ posts }) => (
-  <div className="main-content">
-    <div className="hero">
-      <h1>📘 Blog từ Markdown</h1>
-      <p>Chào mừng bạn đến với blog của mình! Tạo và đọc các bài viết Markdown dễ dàng.</p>
-    </div>
-    <div className="card">
-      <h2>Giới thiệu</h2>
-      <p>Đây là blog cá nhân của bạn, nơi bạn có thể tạo và đọc các bài viết Markdown.</p>
-    </div>
-    <div className="card">
-      <h2>Hướng dẫn</h2>
-      <p>Chọn một bài viết từ danh sách bên trái hoặc tạo bài viết mới để bắt đầu.</p>
-    </div>
   </div>
 );
 
@@ -57,12 +42,21 @@ function App() {
           <Link to="/" className="nav-link">Trang chủ</Link>
         </nav>
         <div className="App">
-          <Sidebar posts={posts} />
           <Routes>
-            <Route path="/" element={<Home posts={posts} />} />
+            <Route path="/" element={<HomePage />} />
             <Route
-              path="/post/:slug"
-              element={<MarkdownPost exportContent={exportContent} />}
+              path="*"
+              element={
+                <>
+                  <Sidebar posts={posts} />
+                  <Routes>
+                    <Route
+                      path="/post/:slug"
+                      element={<MarkdownPost exportContent={exportContent} />}
+                    />
+                  </Routes>
+                </>
+              }
             />
           </Routes>
         </div>
