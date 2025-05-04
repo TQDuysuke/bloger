@@ -1,12 +1,12 @@
-# Giới thiệu
+# Introduction
 
-Chào mừng bạn đến với blog của mình! Đây là bài viết đầu tiên.
+Welcome to my blog! This is the first post.
 
-## Mục tiêu
+## Goals
 
-- Tìm hiểu cách sử dụng Markdown.
-- Tạo blog cá nhân.
+- Learn how to use Markdown.
+- Create a personal blog.
 
-## Kết luận
+## Conclusion
 
-Markdown rất hữu ích và dễ sử dụng!
+Markdown is very useful and easy to use!

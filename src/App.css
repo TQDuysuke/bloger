@@ -4,8 +4,8 @@
   --secondary-text-color: #8b949e;
   --link-color: #58a6ff;
   --link-hover-color: #1f6feb;
-  --button-bg-color: #238636;
-  --button-hover-bg-color: #2ea043;
+  --button-bg-color: #58a6ff;
+  --button-hover-bg-color: #1f6feb;
   --card-bg-color: #21262d;
   --navbar-bg-color: #161b22;
   --border-color: #30363d;
@@ -22,7 +22,7 @@ body {
 
 .App {
   display: flex;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
   padding: 20px;
   gap: 20px;
@@ -35,6 +35,20 @@ body {
   background-color: var(--navbar-bg-color);
   padding: 15px 30px;
   box-shadow: var(--box-shadow);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .logo img {
+  height: 40px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 
 .navbar .nav-link {

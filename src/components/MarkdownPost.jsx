@@ -47,7 +47,7 @@ const MarkdownPost = ({ exportContent }) => {
       {toc.length > 0 && (
         <div className="toc">
           <button onClick={() => setShowToc(!showToc)}>
-            {showToc ? 'Ẩn mục lục' : 'Hiện mục lục'}
+            {showToc ? 'Hide Table of Contents' : 'Show Table of Contents'}
           </button>
           {showToc && (
             <ul>

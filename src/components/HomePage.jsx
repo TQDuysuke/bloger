@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
 import './HomePage.css';
 import tranduyImage from '../pictures/tranduy.jpg'; // Import the image
 
@@ -17,8 +18,10 @@ const HomePage = () => {
           Explore my blog to see how I bring ideas to life.
         </p>
         <div className="homepage-buttons">
-          <Link to="/posts" className="btn">View Posts</Link>
-          <Link to="/create" className="btn">Create New Post</Link>
+          <Link to="/post/intro" className="btn">View Posts</Link>
+          <a href="https://github.com/TQDuysuke" className="btn" target="_blank" rel="noopener noreferrer">
+            <FaGithub style={{ marginRight: '8px' }} /> GitHub profile
+          </a>
         </div>
       </div>
       <div className="homepage-right">

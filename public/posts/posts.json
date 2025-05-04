@@ -1,5 +1,5 @@
 [
-  { "title": "Giới thiệu", "slug": "gioi-thieu", "file": "/posts/intro.md" },
-  { "title": "Cài đặt", "slug": "cai-dat", "file": "/posts/setup.md" },
-  { "title": "Hướng dẫn sử dụng", "slug": "huong-dan-su-dung", "file": "/posts/usage.md" }
+  { "title": "Introduction", "slug": "intro", "file": "/posts/intro.md" },
+  { "title": "Setup", "slug": "setup", "file": "/posts/setup.md" },
+  { "title": "User Guide", "slug": "usage", "file": "/posts/usage.md" }
 ]
