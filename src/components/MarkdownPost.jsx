@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-const MarkdownPost = () => {
+const MarkdownPost = ({ exportContent }) => {
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [toc, setToc] = useState([]);
+  const [showToc, setShowToc] = useState(false);
+  const [postTitle, setPostTitle] = useState(''); // New state for the post title
 
   useEffect(() => {
     fetch('/posts/posts.json')
@@ -14,6 +16,7 @@ const MarkdownPost = () => {
       .then((posts) => {
         const post = posts.find((p) => p.slug === slug);
         if (post) {
+          setPostTitle(post.title); // Set the post title
           fetch(post.file)
             .then((res) => res.text())
             .then((text) => {
@@ -36,17 +39,25 @@ const MarkdownPost = () => {
   };
 
   return (
-    <div className="markdown-body">
+    <div className='markdown-post'>
+      <div className="post-header">
+        <h1>{postTitle}</h1>
+        <button onClick={() => exportContent(content)}>Export as .md</button>
+      </div>
       {toc.length > 0 && (
         <div className="toc">
-          <h2>Mục lục</h2>
-          <ul>
-            {toc.map((item, index) => (
-              <li key={index} style={{ marginLeft: `${(item.level - 1) * 20}px` }}>
-                <a href={`#${item.id}`}>{item.text}</a>
-              </li>
-            ))}
-          </ul>
+          <button onClick={() => setShowToc(!showToc)}>
+            {showToc ? 'Ẩn mục lục' : 'Hiện mục lục'}
+          </button>
+          {showToc && (
+            <ul>
+              {toc.map((item, index) => (
+                <li key={index} style={{ marginLeft: `${(item.level - 1) * 20}px` }}>
+                  <a href={`#${item.id}`}>{item.text}</a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
       <ReactMarkdown

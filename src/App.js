@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MarkdownPost from './components/MarkdownPost';
-import NewPost from './components/NewPost';
+import { saveAs } from 'file-saver';
 import './App.css';
+import './markdown.css'; // Import the custom Markdown CSS
 
 const Sidebar = ({ posts }) => (
   <div className="sidebar">
@@ -23,7 +24,6 @@ const Home = ({ posts }) => (
     <div className="hero">
       <h1>📘 Blog từ Markdown</h1>
       <p>Chào mừng bạn đến với blog của mình! Tạo và đọc các bài viết Markdown dễ dàng.</p>
-      <Link to="/new">Tạo bài viết mới</Link>
     </div>
     <div className="card">
       <h2>Giới thiệu</h2>
@@ -45,19 +45,25 @@ function App() {
       .then(setPosts);
   }, []);
 
+  const exportContent = (content) => {
+    const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+    saveAs(blob, 'exported-content.md');
+  };
+
   return (
     <Router>
       <div>
         <nav className="navbar">
           <Link to="/" className="nav-link">Trang chủ</Link>
-          <Link to="/new" className="nav-link">Tạo bài viết mới</Link>
         </nav>
         <div className="App">
           <Sidebar posts={posts} />
           <Routes>
             <Route path="/" element={<Home posts={posts} />} />
-            <Route path="/post/:slug" element={<MarkdownPost />} />
-            <Route path="/new" element={<NewPost />} />
+            <Route
+              path="/post/:slug"
+              element={<MarkdownPost exportContent={exportContent} />}
+            />
           </Routes>
         </div>
       </div>
