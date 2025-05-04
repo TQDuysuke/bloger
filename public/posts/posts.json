@@ -1,5 +1,6 @@
 [
   { "title": "Introduction", "slug": "intro", "file": "/posts/intro.md" },
   { "title": "Setup", "slug": "setup", "file": "/posts/setup.md" },
-  { "title": "User Guide", "slug": "usage", "file": "/posts/usage.md" }
+  { "title": "User Guide", "slug": "usage", "file": "/posts/usage.md" },
+  { "title": "1-Lead ECG by EDS", "slug": "demo", "file": "/posts/demo.md" }
 ]

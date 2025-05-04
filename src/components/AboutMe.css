@@ -1,35 +1,49 @@
 .about-me {
-  background-color: var(--navbar-bg-color);
-  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  color: #1f6feb;
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: var(--box-shadow);
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
+  line-height: 1.6;
 }
 
-.about-me h1 {
+.intro-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.intro-section p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.career-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-.about-me p {
+.career-section p {
   font-size: 16px;
-  color: var(--secondary-text-color);
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.about-me .btn {
-  text-decoration: none;
-  color: white;
-  background-color: var(--button-bg-color);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.about-me .btn:hover {
-  background-color: var(--button-hover-bg-color);
+.skills span {
+  background-color: #58a6ff;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  /* border: 1px solid #ddd; */
 }

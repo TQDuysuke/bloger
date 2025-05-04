@@ -4,15 +4,36 @@ import './AboutMe.css';
 function AboutMe() {
   return (
     <div className="about-me">
-      <h1>About Me</h1>
-      <p>Hello! My name is Tran Duy, and I am passionate about web development and programming.</p>
-      <p>
-        I enjoy creating web applications, exploring new technologies, and sharing my knowledge with others. 
-        Feel free to check out my GitHub profile for more projects and contributions.
-      </p>
-      <a href="https://github.com/TQDuysuke" className="btn">
-        Visit My GitHub
-      </a>
+      <div className="intro-section">
+        <h1>Hi there!</h1>
+        <p>
+          Fuelled by a passion for designing compelling products, I have a deep desire to excel and 
+          continuously improve in my work. Learn more about my journey below.
+        </p>
+      </div>
+      <div className="career-section">
+        <h2>My Career So Far</h2>
+        <p>
+          Always up for a challenge, I have worked for lean start-ups and was a member of the first 
+          New Zealand start-up to attend Y Combinator, the largest start-up accelerator in the world. 
+          From there, I worked my way up to Art Director and Team Lead at a start-up where I oversaw 
+          the design of 30+ mobile and desktop apps. Currently, I lead UI/UX design at SaaS start-up VideoMyJob.
+        </p>
+        <div className="skills">
+          <span>UI Design</span>
+          <span>UX Design</span>
+          <span>Prototyping</span>
+          <span>Branding</span>
+          <span>HTML/CSS</span>
+          <span>Wireframing</span>
+          <span>Information Architecture</span>
+          <span>User Research</span>
+          <span>User Interviews</span>
+          <span>Leadership</span>
+          <span>Sketch</span>
+          <span>Adobe Suite</span>
+        </div>
+      </div>
     </div>
   );
 }
