@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import logo from './pictures/logo.png'; // Import the logo image
+import config from './config'; // Import config
 import MarkdownPost from './components/MarkdownPost';
 import HomePage from './components/HomePage';
 import AboutMe from './components/AboutMe'; // Import the AboutMe component
@@ -61,11 +61,11 @@ function App() {
 
   return (
     <Router>
-      <div >
+      <div>
         <nav className="navbar">
           <div className="navbar-left">
             <Link to="/" className="logo">
-              <img src={logo} alt="Logo" />
+              <img src={config.images.logo} alt="Logo" />
             </Link>
           </div>
           <div className="navbar-right">

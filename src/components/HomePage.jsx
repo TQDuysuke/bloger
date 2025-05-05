@@ -1,35 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
+import { FaGithub } from 'react-icons/fa';
 import './HomePage.css';
-import './VSCodeFont.css'; // Add this import for the blinking cursor effect and VS Code font
-import tranduyImage from '../pictures/tranduy.jpg'; // Import the image
-// import logoImage from '../pictures/logo.png'; // Import the logo
+import './VSCodeFont.css';
+import config from '../config'; // Import config
 
 const HomePage = () => {
+  const { personalInfo, images } = config;
+
   return (
     <div className="homepage">
       <div className="homepage-left">
-        {/* <img src={logoImage} alt="Logo" className="homepage-logo" /> Add logo */}
         <h2>WELCOME TO MY WORLD</h2>
         <h1 className="vscode-font">
-          Hi, I'm <span className="highlight">Tran Duy</span>
+          Hi, I'm <span className="highlight">{personalInfo.name}</span>
           <span className="blinking-cursor">|</span>
         </h1>
-        <h1 className="vscode-font">a Developer.</h1>
-        <p>
-          I use technology to simplify experiences and create meaningful interactions. 
-          Explore my blog to see how I bring ideas to life.
-        </p>
+        <h1 className="vscode-font">{personalInfo.title}</h1>
+        <p>{personalInfo.intro}</p>
         <div className="homepage-buttons">
           <Link to="/post/intro" className="btn">View Posts</Link>
-          <a href="https://github.com/TQDuysuke" className="btn" target="_blank" rel="noopener noreferrer">
+          <a href={personalInfo.github} className="btn" target="_blank" rel="noopener noreferrer">
             <FaGithub style={{ marginRight: '8px' }} /> GitHub profile
           </a>
         </div>
       </div>
       <div className="homepage-right">
-        <img src={tranduyImage} alt="Tran Duy" className="homepage-image" />
+        <img src={images.profile} alt={personalInfo.name} className="homepage-image" />
       </div>
     </div>
   );
