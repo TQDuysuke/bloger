@@ -6,6 +6,7 @@ import MarkdownPost from './components/MarkdownPost';
 import HomePage from './components/HomePage';
 import AboutMe from './components/AboutMe'; // Import the AboutMe component
 import { saveAs } from 'file-saver';
+import { FaHome, FaInfoCircle, FaGithub, FaFileAlt } from 'react-icons/fa'; // Import icons
 import './markdown.css'; // Import the custom Markdown CSS
 import './App.css';
 
@@ -15,7 +16,9 @@ const Sidebar = ({ posts }) => (
     <ul>
       {posts.map((post) => (
         <li key={post.slug}>
-          <Link to={`/post/${post.slug}`}>{post.title}</Link>
+          <Link to={`/post/${post.slug}`}>
+            <FaFileAlt className="post-icon" /> {post.title}
+          </Link>
         </li>
       ))}
     </ul>
@@ -46,6 +49,11 @@ function App() {
       particle.style.top = `${Math.random() * 100}vh`;
       particle.style.left = `${Math.random() * 100}vw`;
       particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+
+      // Randomly assign one of the two colors
+      const colors = ['var(--link-hover-color)', 'var(--text-color)'];
+      particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
       particleContainer.appendChild(particle);
 
       setTimeout(() => particle.remove(), 10000);
@@ -70,16 +78,16 @@ function App() {
           </div>
           <div className="navbar-right">
             <Link to="/" className="nav-link">
-              Home
+              <FaHome className="nav-icon" /> Home
             </Link>
             <Link to="/post/intro" className="nav-link">
-              Introduction
+              <FaFileAlt className="nav-icon" /> Posts
             </Link>
             <Link to="/about-me" className="nav-link">
-              About Me
+              <FaInfoCircle className="nav-icon" /> About Me
             </Link>
-            <a href="https://github.com/TQDuysuke" className="nav-link">
-              GitHub profile
+            <a href="https://github.com/TQDuysuke" className="nav-link" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="nav-icon" /> GitHub profile
             </a>
           </div>
         </nav>

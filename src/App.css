@@ -18,8 +18,6 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  position: relative;
-  overflow: hidden;
 }
 
 .App {
@@ -54,11 +52,18 @@ body {
 }
 
 .navbar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add spacing between icon and text */
   color: var(--text-color);
   text-decoration: none;
   font-size: 16px;
   margin: 0 15px;
   transition: color 0.3s;
+}
+
+.navbar .nav-link .nav-icon {
+  font-size: 18px; /* Adjust icon size */
 }
 
 .navbar .nav-link:hover {
@@ -95,10 +100,17 @@ body {
 }
 
 .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add spacing between icon and text */
   text-decoration: none;
   color: var(--link-color);
   font-size: 16px;
   transition: color 0.3s;
+}
+
+.sidebar a .post-icon {
+  font-size: 14px; /* Adjust icon size */
 }
 
 .sidebar a:hover {
@@ -293,9 +305,9 @@ button:hover {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--link-hover-color);
   border-radius: 50%;
-  animation: particle-animation 10s linear infinite;
+  animation: particle-color-animation 10s linear infinite, particle-animation 10s linear infinite;
 }
 
 @keyframes particle-animation {
@@ -306,5 +318,14 @@ button:hover {
   100% {
     transform: translateY(-100vh) scale(0.5);
     opacity: 0;
+  }
+}
+
+@keyframes particle-color-animation {
+  0%, 50% {
+    background-color: var(--link-hover-color);
+  }
+  10% {
+    background-color: #ffffff;
   }
 }
