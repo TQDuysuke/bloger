@@ -18,7 +18,7 @@ Welcome to **Bloger**, a personal blog platform built with ReactJS. This project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/bloger.git
+   git clone https://github.com/TQDuysuke/bloger.git
    cd bloger
    ```
 
