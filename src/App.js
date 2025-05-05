@@ -35,6 +35,30 @@ function App() {
     saveAs(blob, 'exported-content.md');
   };
 
+  useEffect(() => {
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'particle-container';
+    document.body.appendChild(particleContainer);
+
+    const createParticle = () => {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.top = `${Math.random() * 100}vh`;
+      particle.style.left = `${Math.random() * 100}vw`;
+      particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      particleContainer.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 10000);
+    };
+
+    const interval = setInterval(createParticle, 200);
+
+    return () => {
+      clearInterval(interval);
+      document.body.removeChild(particleContainer);
+    };
+  }, []);
+
   return (
     <Router>
       <div >

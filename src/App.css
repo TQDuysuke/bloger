@@ -18,6 +18,8 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+  position: relative;
+  overflow: hidden;
 }
 
 .App {
@@ -275,4 +277,34 @@ button:hover {
 
 .home-buttons .btn:hover {
   background-color: var(--button-hover-bg-color);
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: particle-animation 10s linear infinite;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
 }
