@@ -10,6 +10,7 @@ Welcome to **Bloger**, a personal blog platform built with ReactJS. This project
 - **Customizable Themes**: Includes dark mode and customizable styles.
 - **Interactive Components**: Features like a slideshow, table of contents, and export functionality.
 - **GitHub Integration**: Links to your GitHub profile for easy access.
+- **Easy Personalization**: Update personal information and images via a single configuration file.
 
 ## Getting Started
 
@@ -32,6 +33,39 @@ Welcome to **Bloger**, a personal blog platform built with ReactJS. This project
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+### Customization
+
+To personalize the blog for your own use, edit the `config.jsx` file located in the `src` directory. This file contains all the personal information and image paths used throughout the application.
+
+#### Example:
+```javascript
+const config = {
+  personalInfo: {
+    name: "Your Name",
+    title: "Your Title",
+    intro: "A short introduction about yourself.",
+    github: "https://github.com/your-profile",
+    about: {
+      greeting: "Hello!",
+      description: "A detailed description about yourself.",
+      journey: "Your career journey and projects.",
+      skills: ["Skill1", "Skill2", "Skill3"]
+    }
+  },
+  images: {
+    profile: require('./pictures/your-profile-image.jpg'),
+    slideshow: [
+      require('./pictures/image1.jpg'),
+      require('./pictures/image2.jpg'),
+      require('./pictures/image3.jpg')
+    ],
+    logo: require('./pictures/logo.png')
+  }
+};
+```
+
+Replace the placeholder values with your own details and images.
 
 ## Available Scripts
 
