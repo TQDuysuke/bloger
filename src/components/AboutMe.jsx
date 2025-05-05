@@ -12,7 +12,7 @@ function AboutMe() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 3000); // Auto-slide every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -41,33 +41,30 @@ function AboutMe() {
         </div>
         <div className="content-section">
           <div className="intro-section">
-            <h1>Hi there!</h1>
+            <h1>Hello!</h1>
             <p>
-              Fuelled by a passion for designing compelling products, I have a deep desire to excel and 
-              continuously improve in my work. Learn more about my journey below.
+              I'm Duy, an embedded systems enthusiast from Can Tho, Vietnam. I'm currently developing a personal blog platform using ReactJS to share my technical notes and Markdown (.md) articles. I'm also using Cloudflare Tunnel to host the blog on my local machine and make it remotely accessible.
             </p>
           </div>
           <div className="career-section">
-            <h2>My Career So Far</h2>
+            <h2>My Journey and Projects</h2>
             <p>
-              Always up for a challenge, I have worked for lean start-ups and was a member of the first 
-              New Zealand start-up to attend Y Combinator, the largest start-up accelerator in the world. 
-              From there, I worked my way up to Art Director and Team Lead at a start-up where I oversaw 
-              the design of 30+ mobile and desktop apps. Currently, I lead UI/UX design at SaaS start-up VideoMyJob.
+              My focus is on embedded systems development, especially with the ESP32 platform. I’ve built sound simulators, MQTT-controlled devices, and real-time embedded applications. My blog project also supports uploading and viewing Markdown articles with images, making it easy to document and share embedded-related content.
             </p>
             <div className="skills">
-              <span>UI Design</span>
-              <span>UX Design</span>
-              <span>Prototyping</span>
-              <span>Branding</span>
-              <span>HTML/CSS</span>
-              <span>Wireframing</span>
-              <span>Information Architecture</span>
-              <span>User Research</span>
-              <span>User Interviews</span>
-              <span>Leadership</span>
-              <span>Sketch</span>
-              <span>Adobe Suite</span>
+              <span>Embedded Systems</span>
+              <span>ESP32</span>
+              <span>FreeRTOS</span>
+              <span>MQTT</span>
+              <span>C/C++</span>
+              <span>ReactJS</span>
+              <span>Markdown Integration</span>
+              <span>Cloudflare Tunnel</span>
+              <span>Docker</span>
+              <span>Linux (Ubuntu)</span>
+              <span>Web-based Control Interfaces</span>
+              <span>Microcontroller Programming</span>
+              <span>WebSocket</span>
             </div>
           </div>
         </div>

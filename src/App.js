@@ -37,7 +37,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div >
         <nav className="navbar">
           <div className="navbar-left">
             <Link to="/" className="logo">

@@ -6,7 +6,7 @@
     margin-left: 10%;
     margin-right: 10%;
   padding: 0 50px;
-  background-color: #0d1117;
+  /* background-color: #0d1117; */
   color: #c9d1d9;
   font-family: 'Roboto', sans-serif;
 }
@@ -64,7 +64,7 @@
 }
 
 .homepage-image {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
