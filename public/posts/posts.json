@@ -1,6 +1,7 @@
 [
   { "title": "Introduction", "slug": "intro", "file": "/posts/intro.md" },
-  { "title": "Setup", "slug": "setup", "file": "/posts/setup.md" },
-  { "title": "User Guide", "slug": "usage", "file": "/posts/usage.md" },
-  { "title": "1-Lead ECG by EDS", "slug": "demo", "file": "/posts/demo.md" }
+  { "title": "Working with Images", "slug": "images", "file": "/posts/images.md" },
+  { "title": "Math Formulas in Markdown", "slug": "math-formulas", "file": "/posts/math-formulas.md" },
+  { "title": "Chemistry Formulas in Markdown", "slug": "chemistry-formulas", "file": "/posts/chemistry-formulas.md" },
+  { "title": "Using Headings Effectively", "slug": "headings", "file": "/posts/headings.md" }
 ]

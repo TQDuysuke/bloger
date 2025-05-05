@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css'; // Import KaTeX styles
 
 const MarkdownPost = ({ exportContent }) => {
   const { slug } = useParams();
@@ -61,6 +64,8 @@ const MarkdownPost = ({ exportContent }) => {
         </div>
       )}
       <ReactMarkdown
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
         components={{
           h1: ({ node, ...props }) => <h1 id={props.children.toString().toLowerCase().replace(/\s+/g, '-')}>{props.children}</h1>,
           h2: ({ node, ...props }) => <h2 id={props.children.toString().toLowerCase().replace(/\s+/g, '-')}>{props.children}</h2>,

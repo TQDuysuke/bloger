@@ -69,3 +69,10 @@ blockquote {
   display: block;
   margin: 10px auto;
 }
+
+.katex {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  line-height: 1.2;
+  color: var(--text-color);
+}
