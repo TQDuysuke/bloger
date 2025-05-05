@@ -45,7 +45,7 @@ const config = {
     name: "Your Name",
     title: "Your Title",
     intro: "A short introduction about yourself.",
-    github: "https://github.com/your-profile",
+    github: "https://github.com/TQDuysuke",
     about: {
       greeting: "Hello!",
       description: "A detailed description about yourself.",
@@ -95,7 +95,7 @@ Ejects the app configuration for advanced customization.
 
 ## Live Demo
 
-Check out the live demo of the project [here](https://your-live-demo-link.com).
+Check out the live demo of the project [here](https://blog.tqduy.id.vn/).
 
 ## License
 
